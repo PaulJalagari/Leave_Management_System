@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/security
+	http://www.springframework.org/schema/security/spring-security-3.1.xsd">
+
+	<global-method-security pre-post-annotations="enabled">
+	</global-method-security>
+	<http auto-config="true" use-expressions="true">
+		<intercept-url pattern="/login" access="permitAll" />
+		<intercept-url pattern="/welcome" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/profile" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/leave" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/dateAction" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/approve" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/requests" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/**" access="hasRole('ROLE_USER')" />
+		<form-login login-page="/login" default-target-url="/welcome"
+			authentication-failure-url="/loginfailed?error=true" />
+		<logout />
+	</http>
+
+
+	<authentication-manager>
+		<authentication-provider>
+			<user-service>
+				<user name="anjana" password="123456" authorities="ROLE_USER" />
+				<user name="paul" password="123456" authorities="ROLE_USER,ROLE_ADMIN" />
+			</user-service>
+		</authentication-provider>
+	</authentication-manager>
+</beans:beans>

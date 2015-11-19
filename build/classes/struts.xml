@@ -22,18 +22,17 @@
 			<result name="success">secure/profilesuccess.jsp</result>
 			<result name="error">secure/profilerror.jsp</result>
 		</action>
-		<action name="leave" class="com.struts2.action.DateTimePickerAction"
-			method="display">
-			<result name="none">secure/date.jsp</result>
+		<action name="leave">
+			<result>secure/date.jsp</result>
 		</action>
 
 		<action name="dateAction" class="com.struts2.action.DateTimePickerAction">
-			<result name="success">secure/datesuccess.jsp</result>
+			<result name="input">secure/datesuccess.jsp</result>
 		</action>
 		<action name="requests" class="com.struts2.action.ApproveDao">
 			<result name="success">secure/Approve.jsp</result>
 		</action>
-		
+
 		<action name="approve" class="com.struts2.action.ApproveAction">
 			<result name="success">secure/Approved.jsp</result>
 		</action>

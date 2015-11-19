@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
-import java.util.Date;
+import java.sql.Date;
 
 public class StatusAction {
 
@@ -17,12 +17,10 @@ public class StatusAction {
 
 			PreparedStatement ps = con
 					.prepareStatement("insert into leaves(name,type,from_date,to_date,status)" + "values(?,?,?,?,?)");
-			java.sql.Date sqlDate1=new java.sql.Date(from.getTime());
-			java.sql.Date sqlDate2=new java.sql.Date(to.getTime());
 			ps.setString(1, name);
 			ps.setString(2, type);
-			ps.setDate(3, sqlDate1);
-			ps.setDate(4, sqlDate2);
+			ps.setDate(3, from);
+			ps.setDate(4, to);
 			ps.setString(5, status);
 			ResultSet rs = ps.executeQuery();
 			return rs;

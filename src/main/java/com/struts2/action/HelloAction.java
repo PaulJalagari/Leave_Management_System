@@ -1,7 +1,5 @@
 package com.struts2.action;
 
-import java.sql.ResultSet;
-
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.struts2.ServletActionContext;
@@ -13,7 +11,7 @@ public class HelloAction {
 		HttpServletRequest request = ServletActionContext.getRequest();
 		String logged_in_user = request.getUserPrincipal().getName();
 		setName(logged_in_user);
-		ProfileDao info=new ProfileDao();
+		ProfileDao info = new ProfileDao();
 		info.setName(logged_in_user);
 		return "SUCCESS";
 	}

@@ -50,14 +50,14 @@
 			<s:select name="type" label="Type of Leave" headerKey="-1"
 				headerValue="Select Type"
 				list="#{'Vacation':'Vacation', 'Sick':'Sick', 'Leave Without Pay':'Leave Without Pay', 'Casual':'Casual'}"
-				 value="Vacation" />
+				value="Vacation" />
 
 			<sx:datetimepicker name="date1" label="From "
-				displayFormat="dd-MMM-yyyy" value="todayDate"/>
+				displayFormat="dd-MMM-yyyy" value="todayDate" />
 			<br />
 
 			<sx:datetimepicker name="date2" label="To "
-				displayFormat="dd-MMM-yyyy" value=" "/>
+				displayFormat="dd-MMM-yyyy" value=" " />
 			<br />
 			<br />
 			<s:submit value="submit" name="submit" id="button" />

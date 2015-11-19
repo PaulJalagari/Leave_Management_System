@@ -1,6 +1,6 @@
 package com.struts2.action;
 
-import java.util.Date;
+import java.sql.Date;
 
 import javax.servlet.http.HttpServletRequest;
 

@@ -4,8 +4,6 @@ import java.sql.*;
 import java.util.ArrayList;
 
 import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpSession;
-
 import org.apache.struts2.ServletActionContext;
 
 public class ProfileDao {

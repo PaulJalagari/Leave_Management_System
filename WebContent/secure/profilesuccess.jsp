@@ -2,14 +2,13 @@
 <html>
 <head>
 <style>
-
 </style>
 </head>
 <body>
-	
+
 	<%@ taglib uri="/struts-tags" prefix="s"%>
 
-	
+
 
 	<div id="section">
 		<s:iterator value="list">
@@ -26,8 +25,8 @@
 			Email : <s:property value="email" />
 			<br />
 			<br />
-			<hr>	
-			
+			<hr>
+
 		</s:iterator>
 	</div>
 

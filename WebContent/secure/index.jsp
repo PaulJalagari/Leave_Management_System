@@ -50,6 +50,7 @@ html {
 						System</span></a></li>
 			<li><a href='profile'><span>Profile</span></a></li>
 			<li><a href='leave'><span>Apply for Leave</span></a></li>
+			<li><a href='requests'><span>Leave requests</span></a></li>
 			<li class='last'><a
 				href="<c:url value="/j_spring_security_logout"/>"><span>
 						Logout </span></a></li>

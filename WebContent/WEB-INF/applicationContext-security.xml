@@ -10,13 +10,13 @@
 	</global-method-security>
 	<http auto-config="true" use-expressions="true">
 		<intercept-url pattern="/login" access="permitAll" />
-		<intercept-url pattern="/welcome" access="hasRole('ROLE_ADMIN')" />
-		<intercept-url pattern="/profile" access="hasRole('ROLE_ADMIN')" />
-		<intercept-url pattern="/leave" access="hasRole('ROLE_ADMIN')" />
-		<intercept-url pattern="/dateAction" access="hasRole('ROLE_ADMIN')" />
+		<intercept-url pattern="/profile" access="hasRole('ROLE_USER')" />
+		<intercept-url pattern="/leave" access="hasRole('ROLE_USER')" />
+		<intercept-url pattern="/dateAction" access="hasRole('ROLE_USER')" />
 		<intercept-url pattern="/approve" access="hasRole('ROLE_ADMIN')" />
 		<intercept-url pattern="/requests" access="hasRole('ROLE_ADMIN')" />
 		<intercept-url pattern="/**" access="hasRole('ROLE_USER')" />
+		<intercept-url pattern="/welcome" access="hasRole('ROLE_USER')" />
 		<form-login login-page="/login" default-target-url="/welcome"
 			authentication-failure-url="/loginfailed?error=true" />
 		<logout />

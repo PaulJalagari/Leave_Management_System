@@ -66,8 +66,8 @@ public class DateTimePickerAction extends ActionSupport {
 		String logged_in_user = request.getUserPrincipal().getName();
 		setName(logged_in_user);
 		setStatus("pending");
-		StatusAction leave_data=new StatusAction();
-		leave_data.status(logged_in_user,getType(),getDate1(),getDate2(),getStatus());
+		StatusAction leave_data = new StatusAction();
+		leave_data.status(logged_in_user, getType(), getDate1(), getDate2(), getStatus());
 		return SUCCESS;
 	}
 

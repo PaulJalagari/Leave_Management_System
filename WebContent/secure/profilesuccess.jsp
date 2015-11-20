@@ -5,12 +5,12 @@
 </style>
 </head>
 <body>
-
+	<jsp:include page="index.jsp"></jsp:include>
 	<%@ taglib uri="/struts-tags" prefix="s"%>
 
 
 
-	<div id="section">
+	<div id="body">
 		<s:iterator value="list">
 			ID No : <s:property value="id" />
 			<br />
@@ -25,12 +25,12 @@
 			Email : <s:property value="email" />
 			<br />
 			<br />
-			<hr>
+			
 
 		</s:iterator>
 	</div>
 
-	<div id="footer">Paul Jalagari</div>
+	
 
 </body>
 </html>

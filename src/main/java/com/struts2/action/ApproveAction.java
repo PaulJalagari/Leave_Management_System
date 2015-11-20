@@ -53,7 +53,7 @@ public class ApproveAction extends ActionSupport {
 	public String execute() throws Exception {
 		ApproveDao approve = new ApproveDao();
 		approve.execute();
-		User request=new User();
+		User request = new User();
 		request.setStatus("Aproved");
 		String approved_status = request.getStatus();
 		setStatus(approved_status);

@@ -22,16 +22,14 @@
 <body>
 	<div id="dates">
 		<h2>Leave request sent!!</h2>
-		<br /> <br /> Request Summary <br /> <br /> Name:
-		<s:property value="name" />
+		<br /> <br /> Request Summary 
 		<br /> <br /> Type of Leave :
 		<s:property value="type" />
 		<br /> <br /> From :
 		<s:property value="date1" />
 		<br /> <br /> To :
 		<s:property value="date2" />
-		<br /> <br />Status:
-		<s:property value="Status" />
+		
 
 	</div>
 </body>

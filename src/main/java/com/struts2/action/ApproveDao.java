@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class ApproveDao {
 	ArrayList<User> user_data = new ArrayList<User>();
-	
+
 	public ArrayList<User> getUser_data() {
 		return user_data;
 	}

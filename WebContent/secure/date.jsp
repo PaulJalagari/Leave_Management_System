@@ -8,7 +8,6 @@
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <sx:head />
 <title>Leave Dates</title>
-<jsp:include page="index.jsp"></jsp:include>
 <style type="text/css">
 #dates {
 	position: absolute;
@@ -45,6 +44,7 @@
 </style>
 </head>
 <body>
+	<jsp:include page="index.jsp"></jsp:include>
 	<div id="dates">
 		<s:form action="dateAction" namespace="/" method="POST">
 			<s:select name="type" label="Type of Leave" headerKey="-1"

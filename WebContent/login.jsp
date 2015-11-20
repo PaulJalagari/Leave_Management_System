@@ -1,8 +1,17 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@ taglib prefix="sb" uri="/struts-bootstrap-tags"%>
 <html>
 <head>
 <title>Login Page</title>
 <style>
+html {
+	background: url(secure/final.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
 .errorblock {
 	color: #ff0000;
 	background-color: #ffEEEE;
@@ -10,13 +19,22 @@
 	padding: 8px;
 	margin: 16px;
 }
+#input {
+	position: absolute;
+	left: 500px;
+	width: 250px;
+	float: left;
+	padding: 40px;
+	font-family: Capriola, Helvetica, sans-serif;
+	font-weight: bold;
+	font-size: 50px;
+}
 </style>
 </head>
-<body onload='document.f.j_username.focus();'>
-	<h3>Login with Username and Password (Custom Page)</h3>
+<body onload='document.f.j_username.focus();' class="input">
+	<h3>Please Login to continue</h3>
 	<%
 		String error = request.getParameter("error");
-
 		if (error != null) {
 	%>
 

@@ -1,5 +1,8 @@
 
 <!doctype html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<%@taglib uri="/struts-tags" prefix="s"%>
+<%@page import="java.security.Principal"%>
 <html lang=''>
 <head>
 <meta charset='utf-8'>
@@ -20,20 +23,21 @@
 	background-image: url("secure/final.jpg");
 	background-size: 500px 500px
 }
-#body{
-  padding: 20px;
-  font-family: Capriola, Helvetica, sans-serif;
-  float: right;
-  position: fixed;
-  left:300px;
-  
+
+#body {
+	padding: 20px;
+	font-family: Capriola, Helvetica, sans-serif;
+	float: right;
+	position: fixed;
+	left: 300px;
 }
-html { 
-  background: url(secure/white.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+
+html {
+	background: url(secure/white.jpg) no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 </style>
 </head>
@@ -46,12 +50,12 @@ html {
 						System</span></a></li>
 			<li><a href='profile'><span>Profile</span></a></li>
 			<li><a href='leave'><span>Apply for Leave</span></a></li>
-			<li class='last'><a href="<c:url value="/j_spring_security_logout"/>" > Logout </a></li>
+			<li class='last'><a
+				href="<c:url value="/j_spring_security_logout"/>"><span>
+						Logout </span></a></li>
 		</ul>
 	</div>
-	<div id="body">
-	
-	</div>
+	<div id="body"></div>
 	<div id="nav"></div>
 
 </body>
